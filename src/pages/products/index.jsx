@@ -17,7 +17,7 @@ function Products({ products }) {
       {
         products.length > 0 ? (
           <div style={{display: 'flex', flexDirection: 'column'}}>
-            {products.map((p) => <Link key={p._id} href={`/products/${p._id}`}><h1>{p.name}</h1></Link>)}
+            {products.map((p) => <Link style={{ height: '800px' }} key={p._id} href={`/products/${p._id}`}><h1>{p.name}</h1></Link>)}
           </div>
         ) : <small>Không có sản phẩm</small>
       }
@@ -28,23 +28,23 @@ function Products({ products }) {
 export default Products;
 
 // getServerSideProps - Server-Side Rendering
-// export async function getServerSideProps() {
-//   try {
-//     const response = await axiosClient.get('/products');
+export async function getServerSideProps() {
+  try {
+    const response = await axiosClient.get('/products');
 
-//     return {
-//       props: {
-//         products: response.data.payload,
-//       },
+    return {
+      props: {
+        products: response.data.payload,
+      },
 
-//       // revalidate: 24 * 60 * 60,
-//     };
-//   } catch (error) {
-//     return {
-//       notFound: true,
-//     };
-//   }
-// }
+      // revalidate: 24 * 60 * 60,
+    };
+  } catch (error) {
+    return {
+      notFound: true,
+    };
+  }
+}
 
 // getStaticProps - Static-Side Generation
 // export async function getStaticPaths() {
@@ -54,20 +54,20 @@ export default Products;
 //   };
 // }
 
-export async function getStaticProps(req) {
-  try {
-    const response = await axiosClient.get('/products');
+// export async function getStaticProps(req) {
+//   try {
+//     const response = await axiosClient.get('/products');
 
-    return {
-      props: {
-        products: response.data.payload,
-      },
+//     return {
+//       props: {
+//         products: response.data.payload,
+//       },
 
-      // revalidate: 10,
-    };
-  } catch (error) {
-    return {
-      notFound: true,
-    };
-  }
-}
+//       // revalidate: 10,
+//     };
+//   } catch (error) {
+//     return {
+//       notFound: true,
+//     };
+//   }
+// }
