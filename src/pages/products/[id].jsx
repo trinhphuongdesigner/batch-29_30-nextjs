@@ -1,34 +1,12 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React from "react";
 import Head from "next/head";
 import PropTypes from "prop-types";
 
-import axiosClient from "../../libraries/axiosClient";
+import axiosClient from '@/libraries/axiosClient';
 import { useRouter } from "next/router";
 
 function ProductDetail(props) {
-  const { post } = props;
-  const router = useRouter();
-
-  const [product, setProduct] = useState([]);
-  // Call API
-
-  const getProduct = useCallback(async () => {
-    try {
-      const { id } = router.query;
-
-      const res = await axiosClient.get(`/products/${id}`);
-
-      setProduct(res.data.payload);
-    } catch (error) {
-      console.log(error);
-    }
-  }, [router.query]);
-
-  useEffect(() => {
-    if (router.isReady) getProduct()
-  }, [getProduct, router.isReady]);
-
-  console.log('««««« product »»»»»', product);
+  const { product } = props;
 
   return (
     <>
@@ -86,54 +64,56 @@ export default ProductDetail;
 //   try {
 //     const response = await axiosClient.get('/products');
 
-//     const paths = response.data.map((post) => ({
-//       params: { id: post.id },
-//     }))
+//     const paths = response.data.payload.map((p) => {
+//       return {
+//         params: { id: p._id},
+//       }
+//     })
 
 //     return {
 //       paths,
-//       fallback: true,
+//       fallback: block,
 //     }
 //   } catch (error) {
 //     console.log('««««« error »»»»»', error);
 //   }
 // }
 
-// export async function getStaticPaths() {
-//   return {
-//     paths: [],
-//     fallback: true,
-//   };
-// }
+export async function getStaticPaths() {
+  return {
+    paths: [],
+    fallback: true,
+  };
+}
 
-// export async function getStaticProps(req) {
-//   try {
-//     const { params } = req;
-//     const response = await axiosClient.get(`/posts/${params.id}`);
+export async function getStaticProps(req) {
+  try {
+    const { params } = req;
+    const response = await axiosClient.get(`/products/${params.id}`);
 
-//     return {
-//       props: {
-//         post: response.data,
-//       },
-//       // revalidate: 10,
-//     };
-//   } catch (error) {
-//     return {
-//       notFound: true,
-//     };
-//   }
-// }
+    return {
+      props: {
+        product: response.data.payload,
+      },
+
+      revalidate: 60 * 60 * 24 * 30,
+    };
+  } catch (error) {
+    return {
+      notFound: true,
+    };
+  }
+}
 
 // SSR
 // export async function getServerSideProps(req) {
 //   try {
-//     const { params, query } = req;
-//     // console.log('««««« req »»»»»', req);
-//     const response = await axios.get('http://localhost:9000/products');
+//     const { params } = req;
+//     const response = await axiosClient.get(`/products/${params.id}`);
 
 //     return {
 //       props: {
-//         products: response.data,
+//         product: response.data.payload,
 //       },
 //     };
 //   } catch (error) {

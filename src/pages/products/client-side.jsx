@@ -3,7 +3,22 @@ import Head from 'next/head';
 import Link from 'next/link';
 import axiosClient from '@/libraries/axiosClient';
 
-function Products({ products }) {
+function Products(props) {
+  const [products, setProducts] = useState([]);
+  // Call API
+
+  const getProducts = useCallback(async () => {
+    try {
+      const res = await axiosClient.get('/products');
+      setProducts(res.data.payload);
+    } catch (error) {
+      console.log(error);
+    }
+  }, []);
+
+  useEffect(() => {
+    getProducts()
+  }, [getProducts]);
 
   return (
     <>
@@ -27,17 +42,16 @@ function Products({ products }) {
 
 export default Products;
 
-// getServerSideProps - Server-Side Rendering
-// export async function getServerSideProps() {
+// export async function getStaticProps() {
 //   try {
-//     const response = await axiosClient.get('/products');
+//     const response = await axiosClient.get("/posts");
 
 //     return {
 //       props: {
-//         products: response.data.payload,
+//         posts: response.data,
 //       },
 
-//       // revalidate: 24 * 60 * 60,
+//       revalidate: 24 * 60 * 60,
 //     };
 //   } catch (error) {
 //     return {
@@ -45,29 +59,3 @@ export default Products;
 //     };
 //   }
 // }
-
-// getStaticProps - Static-Side Generation
-// export async function getStaticPaths() {
-//   return {
-//     paths: [],
-//     fallback: true,
-//   };
-// }
-
-export async function getStaticProps(req) {
-  try {
-    const response = await axiosClient.get('/products');
-
-    return {
-      props: {
-        products: response.data.payload,
-      },
-
-      // revalidate: 10,
-    };
-  } catch (error) {
-    return {
-      notFound: true,
-    };
-  }
-}
