@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 function Header(props) {
@@ -43,7 +44,7 @@ function Header(props) {
         <div className="row b1  align-items-center p-1  text-light">
           <div className="col-6 col-md-2 ">
             <a href="#" className="link ml-1">
-              <img
+              <Image
                 src="https://icons-for-free.com/iconfiles/png/512/diamond-131979105288827632.png"
                 alt=""
                 loading="lazy"

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 function HomePage2(props) {
@@ -37,14 +38,14 @@ function HomePage2(props) {
             </li>
           </ul>
           <div className="logo">
-            <img src="https://i.postimg.cc/TP6JjSTt/logo.webp" alt="" />
+            <Image src="https://i.postimg.cc/TP6JjSTt/logo.webp" alt="" width={200} height={200} />
           </div>
         </div>
       </nav>
       <section id="home">
         <div className="home_page ">
           <div className="home_img ">
-            <img src="https://i.postimg.cc/t403yfn9/home2.jpg" alt="img " />
+            <Image width={200} height={200} src="https://i.postimg.cc/t403yfn9/home2.jpg" alt="Image " />
           </div>
           <div className="home_txt ">
             <p className="collectio ">SUMMER COLLECTION</p>
@@ -84,8 +85,8 @@ function HomePage2(props) {
       <section id="collection">
         <div className="collections container">
           <div className="content">
-            <img src="https://i.postimg.cc/Xqmwr12c/clothing.webp" alt="img" />
-            <div className="img-content">
+            <Image width={200} height={200} src="https://i.postimg.cc/Xqmwr12c/clothing.webp" alt="Image" />
+            <div className="Image-content">
               <p>Clothing Collections</p>
               <button>
                 <a href="#sellers">SHOP NOW</a>
@@ -93,8 +94,8 @@ function HomePage2(props) {
             </div>
           </div>
           <div className="content2">
-            <img src="https://i.postimg.cc/8CmBZH5N/shoes.webp" alt="img" />
-            <div className="img-content2">
+            <Image width={200} height={200} src="https://i.postimg.cc/8CmBZH5N/shoes.webp" alt="Image" />
+            <div className="Image-content2">
               <p>Shoes Spring</p>
               <button>
                 <a href="#sellers">SHOP NOW</a>
@@ -102,8 +103,8 @@ function HomePage2(props) {
             </div>
           </div>
           <div className="content3">
-            <img src="https://i.postimg.cc/MHv7KJYp/access.webp" alt="img" />
-            <div className="img-content3">
+            <Image width={200} height={200}src="https://i.postimg.cc/MHv7KJYp/access.webp" alt="Image" />
+            <div className="Image-content3">
               <p>Accessories</p>
               <button>
                 <a href="#sellers">SHOP NOW</a>
@@ -117,7 +118,7 @@ function HomePage2(props) {
           <h2>Top Sales</h2>
           <div className="best-seller">
             <div className="best-p1">
-              <img src="https://i.postimg.cc/8CmBZH5N/shoes.webp" alt="img" />
+              <Image width={200} height={200}src="https://i.postimg.cc/8CmBZH5N/shoes.webp" alt="Image" />
               <div className="best-p1-txt">
                 <div className="name-of-p">
                   <p>PS England Shoes</p>
@@ -150,9 +151,9 @@ function HomePage2(props) {
               </div>
             </div>
             <div className="best-p1">
-              <img
+              <Image
                 src="https://i.postimg.cc/76X9ZV8m/Screenshot_from_2022-06-03_18-45-12.png"
-                alt="img"
+                alt="Image"
               />
               <div className="best-p1-txt">
                 <div className="name-of-p">
@@ -183,7 +184,7 @@ function HomePage2(props) {
               </div>
             </div>
             <div className="best-p1">
-              <img src="https://i.postimg.cc/j2FhzSjf/bs2.png" alt="img" />
+              <Image width={200} height={200}src="https://i.postimg.cc/j2FhzSjf/bs2.png" alt="Image" />
               <div className="best-p1-txt">
                 <div className="name-of-p">
                   <p>PS England Shirt</p>
@@ -213,7 +214,7 @@ function HomePage2(props) {
               </div>
             </div>
             <div className="best-p1">
-              <img src="https://i.postimg.cc/QtjSDzPF/bs3.png" alt="img" />
+              <Image width={200} height={200}src="https://i.postimg.cc/QtjSDzPF/bs3.png" alt="Image" />
               <div className="best-p1-txt">
                 <div className="name-of-p">
                   <p>PS England Shoes</p>
@@ -248,7 +249,7 @@ function HomePage2(props) {
           <h2>New Arrivals</h2>
           <div className="best-seller">
             <div className="best-p1">
-              <img src="https://i.postimg.cc/fbnB2yfj/na1.png" alt="img" />
+              <Image width={200} height={200}src="https://i.postimg.cc/fbnB2yfj/na1.png" alt="Image" />
               <div className="best-p1-txt">
                 <div className="name-of-p">
                   <p>PS England T-Shirt</p>
@@ -278,7 +279,7 @@ function HomePage2(props) {
               </div>
             </div>
             <div className="best-p1">
-              <img src="https://i.postimg.cc/zD02zJq8/na2.png" alt="img" />
+              <Image width={200} height={200}src="https://i.postimg.cc/zD02zJq8/na2.png" alt="Image" />
               <div className="best-p1-txt">
                 <div className="name-of-p">
                   <p>PS England Bag</p>
@@ -308,9 +309,9 @@ function HomePage2(props) {
               </div>
             </div>
             <div className="best-p1">
-              <img
+              <Image
                 src="https://i.postimg.cc/Dfj5VBcz/sunglasses1.jpg"
-                alt="img"
+                alt="Image"
               />
               <div className="best-p1-txt">
                 <div className="name-of-p">
@@ -341,7 +342,7 @@ function HomePage2(props) {
               </div>
             </div>
             <div className="best-p1">
-              <img src="https://i.postimg.cc/FszW12Kc/na4.png" alt="img" />
+              <Image width={200} height={200}src="https://i.postimg.cc/FszW12Kc/na4.png" alt="Image" />
               <div className="best-p1-txt">
                 <div className="name-of-p">
                   <p>PS England Shoes</p>
@@ -376,7 +377,7 @@ function HomePage2(props) {
           <h2>Hot Sales</h2>
           <div className="best-seller">
             <div className="best-p1">
-              <img src="https://i.postimg.cc/jS7pSQLf/na4.png" alt="img" />
+              <Image width={200} height={200}src="https://i.postimg.cc/jS7pSQLf/na4.png" alt="Image" />
               <div className="best-p1-txt">
                 <div className="name-of-p">
                   <p>PS England Shoes</p>
@@ -406,7 +407,7 @@ function HomePage2(props) {
               </div>
             </div>
             <div className="best-p1">
-              <img src="https://i.postimg.cc/fbnB2yfj/na1.png" alt="img" />
+              <Image width={200} height={200}src="https://i.postimg.cc/fbnB2yfj/na1.png" alt="Image" />
               <div className="best-p1-txt">
                 <div className="name-of-p">
                   <p>PS England T-Shirt</p>
@@ -436,7 +437,7 @@ function HomePage2(props) {
               </div>
             </div>
             <div className="best-p1">
-              <img src="https://i.postimg.cc/RhVP7YQk/hs1.png" alt="img" />
+              <Image width={200} height={200}src="https://i.postimg.cc/RhVP7YQk/hs1.png" alt="Image" />
               <div className="best-p1-txt">
                 <div className="name-of-p">
                   <p>PS England T-Shirt</p>
@@ -466,7 +467,7 @@ function HomePage2(props) {
               </div>
             </div>
             <div className="best-p1">
-              <img src="https://i.postimg.cc/zD02zJq8/na2.png" alt="img" />
+              <Image width={200} height={200}src="https://i.postimg.cc/zD02zJq8/na2.png" alt="Image" />
               <div className="best-p1-txt">
                 <div className="name-of-p">
                   <p>PS England Bag</p>
@@ -505,8 +506,8 @@ function HomePage2(props) {
         </div>
         <div className="l-news container">
           <div className="l-news1">
-            <div className="news1-img">
-              <img src="https://i.postimg.cc/2y6wbZCm/news1.jpg" alt="img" />
+            <div className="news1-Image">
+              <Image width={200} height={200}src="https://i.postimg.cc/2y6wbZCm/news1.jpg" alt="Image" />
             </div>
             <div className="news1-conte">
               <div className="date-news1">
@@ -524,8 +525,8 @@ function HomePage2(props) {
             </div>
           </div>
           <div className="l-news2">
-            <div className="news2-img">
-              <img src="https://i.postimg.cc/9MXPK7RT/news2.jpg" alt="img" />
+            <div className="news2-Image">
+              <Image width={200} height={200}src="https://i.postimg.cc/9MXPK7RT/news2.jpg" alt="Image" />
             </div>
             <div className="news2-conte">
               <div className="date-news2">
@@ -543,8 +544,8 @@ function HomePage2(props) {
             </div>
           </div>
           <div className="l-news3">
-            <div className="news3-img">
-              <img src="https://i.postimg.cc/x1KKdRLM/news3.jpg" alt="img" />
+            <div className="news3-Image">
+              <Image width={200} height={200}src="https://i.postimg.cc/x1KKdRLM/news3.jpg" alt="Image" />
             </div>
             <div className="news3-conte">
               <div className="date-news3">
@@ -631,7 +632,7 @@ function HomePage2(props) {
       <footer>
         <div className="footer-container container">
           <div className="content_1">
-            <img
+            <Image
               src="https://i.postimg.cc/htGyQ4JB/footer-logo.png"
               alt="logo"
             />
@@ -642,7 +643,7 @@ function HomePage2(props) {
               <br />
               design.
             </p>
-            <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="cards" />
+            <Image width={200} height={200}src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="cards" />
           </div>
           <div className="content_2">
             <h4>SHOPPING</h4>

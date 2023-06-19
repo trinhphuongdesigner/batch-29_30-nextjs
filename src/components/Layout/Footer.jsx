@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 function Footer(props) {
@@ -179,39 +180,43 @@ function Footer(props) {
           <div className="col-12 text-center pt-3 pb-1">
             <a href="#">
               {' '}
-              <img
+              <Image
                 className=" mr-2 ml-2"
                 src="https://seeklogo.com/images/F/facebook-icon-circle-logo-09F32F61FF-seeklogo.com.png"
                 loading="lazy"
                 width="30"
                 height="30"
+                alt='picture'
               />
             </a>
             <a href="#">
-              <img
+              <Image
                 className=" mr-2 ml-2"
                 src="https://i1.wp.com/www.fashionrevolution.org/wp-content/uploads/2019/07/kisspng-social-media-marketing-youtube-instagram-photograp-instagram-logo-icon-png-5b875849ea5482.8768584615355966179598.png?fit=512%2C512&ssl=1"
                 loading="lazy"
                 width="30"
                 height="30"
+                alt='picture'
               />
             </a>
             <a href="#">
-              <img
+              <Image
                 className=" mr-2 ml-2"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/YouTube_social_white_circle_%282017%29.svg/1200px-YouTube_social_white_circle_%282017%29.svg.png"
                 loading="lazy"
                 width="30"
                 height="30"
+                alt='picture'
               />
             </a>
             <a href="#">
-              <img
+              <Image
                 className=" mr-2 ml-2"
                 src="https://3.bp.blogspot.com/-NxouMmz2bOY/T8_ac97cesI/AAAAAAAAGg0/e3vY1_bdnbE/s1600/Twitter+logo+2012.png"
                 loading="lazy"
                 width="30"
                 height="30"
+                alt='picture'
               />
             </a>
           </div>

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 function ModalRegister(props) {
@@ -26,11 +27,12 @@ function ModalRegister(props) {
                 aria-label="Close"
               >
                 <span aria-hidden="true">
-                  <img
+                  <Image
                     src="https://cdn3.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-1/253988/12-512.png"
                     width="25"
                     height="25"
                     loading="lazy"
+                    alt=''
                   />
                 </span>
               </button>
