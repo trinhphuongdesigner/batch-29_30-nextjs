@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 
 function ProductDetail(props) {
   const { product } = props;
+  // const router = useRouter();
 
   return (
     <>
@@ -89,7 +90,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(req) {
   try {
     const { params } = req;
-    const response = await axiosClient.get(`/products/${params.id}`);
+    const response = await axiosClient.get(`/user/products/${params.id}`);
 
     return {
       props: {
@@ -108,6 +109,7 @@ export async function getStaticProps(req) {
 // SSR
 // export async function getServerSideProps(req) {
 //   try {
+//     console.log('««««« req »»»»»', req);
 //     const { params } = req;
 //     const response = await axiosClient.get(`/products/${params.id}`);
 

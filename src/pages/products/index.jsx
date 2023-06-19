@@ -17,7 +17,7 @@ function Products({ products }) {
       {
         products.length > 0 ? (
           <div style={{display: 'flex', flexDirection: 'column'}}>
-            {products.map((p) => <Link style={{ height: '800px' }} key={p._id} href={`/products/${p._id}`}><h1>{p.name}</h1></Link>)}
+            {products.map((p) => <Link style={{ height: '80px' }} key={p._id} href={`/products/${p._id}`}><h1>{p.name}</h1></Link>)}
           </div>
         ) : <small>Không có sản phẩm</small>
       }
@@ -30,7 +30,7 @@ export default Products;
 // getServerSideProps - Server-Side Rendering
 export async function getServerSideProps() {
   try {
-    const response = await axiosClient.get('/products');
+    const response = await axiosClient.get('/user/products');
 
     return {
       props: {
@@ -56,7 +56,7 @@ export async function getServerSideProps() {
 
 // export async function getStaticProps(req) {
 //   try {
-//     const response = await axiosClient.get('/products');
+//     const response = await axiosClient.get('/user/products');
 
 //     return {
 //       props: {
