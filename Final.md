@@ -6,3 +6,11 @@
 6. Sản phẩm khác (vó phân trang, 30 sản phẩm, nếu DB có nhiều hơn 30 sp => hiển thị nút xem thêm, click gọi api get thêm 30sp)
 
 Demo online + gửi branch source code
+
+https://codepen.io/sanketbodke/pen/oNygjmP
+
+https://codepen.io/Vishal4225/pen/JjmpWjP
+
+https://transform.tools/html-to-jsx
+
+https://picsum.photos/200/300
